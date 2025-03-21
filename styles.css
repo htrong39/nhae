@@ -1,0 +1,943 @@
+/* === Thiết lập cơ bản cho toàn bộ trang === */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo', sans-serif; /* Font chữ chính */
+    background-color: #a8edcb; /* Màu nền của trang */
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu bằng chiều cao màn hình */
+    padding-bottom: 50px; /* Khoảng cách dưới cùng */
+}
+
+/* === Thanh điều hướng (Navigation) === */
+nav {
+    height: 88px; /* Chiều cao của thanh điều hướng */
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 25px 0; /* Khoảng cách bên trong */
+    border-radius: 10px; /* Bo góc */
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+nav ul {
+    display: flex; /* Sắp xếp các mục theo hàng ngang */
+    list-style: none; /* Bỏ dấu đầu dòng */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 30px; /* Khoảng cách giữa các mục */
+}
+
+nav ul li a {
+    font-family: 'Baloo', sans-serif; /* Font chữ cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #00765a; /* Màu chữ */
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    font-size: 21px; /* Kích thước chữ */
+    font-weight: 700; /* Độ đậm */
+}
+
+nav ul li a.active {
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Bo góc */
+}
+
+/* === Section Lời Hứa Lành Mạnh (Healthy Promise) === */
+#healthy-promise {
+    padding: 50px 20px; /* Khoảng cách bên trong */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    margin-top: 85px; /* Khoảng cách trên */
+}
+
+.promise-container {
+    max-width: 1200px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    gap: 30px; /* Khoảng cách giữa các phần tử */
+}
+
+.hp-image {
+    flex: 1; /* Chiếm 1 phần không gian */
+    text-align: 20px; /* Căn chỉnh văn bản (có thể không cần thiết) */
+    margin-left: -5px; /* Dịch trái */
+}
+
+.hp-image img {
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 350px; /* Chiều rộng tối đa */
+    border-radius: 10px; /* Bo góc */
+    margin-left: -150px; /* Dịch trái */
+    margin-bottom: -95px; /* Dịch xuống */
+}
+
+.hp-text {
+    flex: 1.2; /* Chiếm 1.2 phần không gian */
+    text-align: left; /* Căn trái văn bản */
+}
+
+.big-title {
+    margin-left: 60px; /* Dịch trái */
+    font-family: 'Baloo 2', cursive; /* Font chữ tiêu đề */
+    font-size: 48px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+}
+
+.brand-text {
+    font-size: 1.4em; /* Kích thước chữ */
+    line-height: 1.5; /* Khoảng cách dòng */
+    color: #000000; /* Màu chữ */
+    font-family: 'Faustina', sans-serif; /* Font chữ */
+    text-align: justify; /* Căn đều văn bản */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    font-weight: bold; /* Độ đậm */
+}
+
+.stats {
+    display: flex; /* Sắp xếp các mục theo hàng ngang */
+    flex-wrap: wrap; /* Cho phép xuống dòng */
+    gap: 20px; /* Khoảng cách giữa các mục */
+    justify-content: flex-start; /* Căn trái */
+}
+
+.stat-box {
+    border-radius: 10px; /* Bo góc */
+    width: 200px; /* Chiều rộng */
+    padding: -2px; /* Khoảng cách bên trong (có thể không cần thiết) */
+}
+
+.stat-box h3 {
+    margin-left: 50px; /* Dịch trái */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+    font-size: 3em; /* Kích thước chữ */
+    margin-bottom: 10px; /* Khoảng cách dưới */
+    color: #00aa6c; /* Màu chữ */
+    font-family: 'iCiel Cadena', sans-serif; /* Font chữ */
+    font-weight: bold; /* Độ đậm */
+}
+
+.stat-box p {
+    margin-left: 50px; /* Dịch trái */
+    font-size: 1em; /* Kích thước chữ */
+    color: #000000; /* Màu chữ */
+    font-family: 'iCiel Cadena', sans-serif; /* Font chữ */
+    font-weight: bold; /* Độ đậm */
+}
+
+/* === Product Slider (Thanh trượt sản phẩm) === */
+#product-slider {
+    position: relative; /* Vị trí tương đối */
+    margin-top: 50px; /* Khoảng cách trên */
+    max-width: 1200px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+    overflow: hidden; /* Ẩn phần thừa */
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 30px 0; /* Khoảng cách bên trong */
+    border-radius: 15px; /* Bo góc */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+}
+
+#product-slider h2 {
+    font-size: 2.5em; /* Kích thước chữ */
+    font-family: 'Baloo', cursive; /* Font chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+}
+
+.slider-container {
+    position: relative; /* Vị trí tương đối */
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 1200px; /* Chiều rộng tối đa */
+    height: 400px; /* Chiều cao */
+    margin: 0 auto; /* Căn giữa */
+}
+
+.slides-wrapper {
+    position: relative; /* Vị trí tương đối */
+    width: 100%; /* Chiều rộng 100% */
+    height: 100%; /* Chiều cao 100% */
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+}
+
+.slides {
+    position: absolute; /* Vị trí tuyệt đối */
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    width: 100%; /* Chiều rộng 100% */
+    height: 100%; /* Chiều cao 100% */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.slide {
+    position: absolute; /* Vị trí tuyệt đối */
+    width: 20%; /* Chiều rộng 20% */
+    height: auto; /* Chiều cao tự động */
+    transition: all 0.5s ease; /* Hiệu ứng chuyển đổi */
+    text-align: center; /* Căn giữa văn bản */
+}
+
+.slide img {
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 100%; /* Chiều rộng tối đa */
+    height: auto; /* Chiều cao tự động */
+    border-radius: 15px; /* Bo góc */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.slider-controls {
+    position: absolute; /* Vị trí tuyệt đối */
+    top: 50%; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Chiều rộng 100% */
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    justify-content: space-between; /* Căn đều hai bên */
+    transform: translateY(-50%); /* Dịch lên để căn giữa */
+}
+
+.prev, .next {
+    color: white; /* Màu chữ */
+    border: none; /* Bỏ viền */
+    padding: 10px 15px; /* Khoảng cách bên trong */
+    cursor: pointer; /* Con trỏ chuột */
+    border-radius: 50%; /* Bo tròn */
+    font-size: 20px; /* Kích thước chữ */
+    z-index: 20; /* Lớp trên cùng */
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+}
+
+/* === Danh Mục Nổi Bật === */
+section[noibat="danhmucnoibat"] .danhmucnoibat-1 {
+    display: grid; /* Sử dụng lưới */
+    grid-template-columns: repeat(5, 1fr); /* 5 cột đều nhau */
+    gap: 30px; /* Khoảng cách giữa các mục */
+    max-width: 1400px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+    padding: 10px; /* Khoảng cách bên trong */
+    margin-top: 60px; /* Khoảng cách trên */
+    margin-bottom: 60px; /* Khoảng cách dưới */
+}
+
+section[noibat="danhmucnoibat"] .chu {
+    text-align: center; /* Căn giữa văn bản */
+    margin-top: 100px; /* Khoảng cách trên */
+    margin-bottom: 150px; /* Khoảng cách dưới */
+}
+
+section[noibat="danhmucnoibat"] .chu h2 {
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 2.5em; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+        -2px -2px 0 #fff,
+        2px -2px 0 #fff,
+        -2px 2px 0 #fff,
+        2px 2px 0 #fff;
+}
+
+section[noibat="danhmucnoibat"] .danhmucnoibat-item {
+    text-align: center; /* Căn giữa văn bản */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    padding: 10px; /* Khoảng cách bên trong */
+    border-radius: 12px; /* Bo góc */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+    border: 1px solid #00aa6c; /* Viền */
+    border-radius: 15px; /* Bo góc */
+}
+
+section[noibat="danhmucnoibat"] .danhmucnoibat-item img {
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 220px; /* Chiều rộng tối đa */
+    height: auto; /* Chiều cao tự động */
+    border-radius: 12px; /* Bo góc */
+    transition: transform 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+section[noibat="danhmucnoibat"] .danhmucnoibat-item h3 {
+    font-family: 'Montserrat', sans-serif; /* Font chữ */
+    color: #00aa6c; /* Màu chữ */
+    margin-top: 10px; /* Khoảng cách trên */
+    font-weight: 600; /* Độ đậm */
+}
+
+section[noibat="danhmucnoibat"] .danhmucnoibat-item img:hover {
+    transform: scale(1.08); /* Phóng to khi hover */
+}
+
+/* === Menu Sản Phẩm === */
+#menu {
+    width: 100%; /* Chiều rộng 100% */
+    padding: 30px; /* Khoảng cách bên trong */
+    margin: 40px 0; /* Khoảng cách trên và dưới */
+    background-color: #a8edcb; /* Màu nền */
+    border-radius: 15px; /* Bo góc */
+    margin-top: 0px; /* Khoảng cách trên */
+}
+
+.chumenu {
+    margin-top: 60px;
+    text-align: center; /* Căn giữa văn bản */
+    margin-bottom: 40px; /* Khoảng cách dưới */
+}
+
+.chumenu h2 {
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 3.5em; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+        -2px -2px 0 #fff,
+         2px -2px 0 #fff,
+        -2px  2px 0 #fff,
+         2px  2px 0 #fff;
+}
+
+.product-grid {
+    display: grid; /* Sử dụng lưới */
+    grid-template-columns: repeat(5, 1fr); /* 5 cột đều nhau */
+    gap: 30px; /* Khoảng cách giữa các mục */
+    max-width: 1400px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+    padding: 10px; /* Khoảng cách bên trong */
+}
+
+.product-grid > div {
+    text-align: center; /* Căn giữa văn bản */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    padding: 10px; /* Khoảng cách bên trong */
+    background-color: #ffffff; /* Màu nền trắng */
+    border-radius: 12px; /* Bo góc */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.product-grid > div:hover {
+    transform: translateY(-5px); /* Nâng lên khi hover */
+}
+
+.product-grid img {
+    width: 100%; /* Chiều rộng 100% */
+    max-width: 220px; /* Chiều rộng tối đa */
+    height: auto; /* Chiều cao tự động */
+    border-radius: 12px; /* Bo góc */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+    border: 1px solid #00aa6c; /* Viền */
+    border-radius: 15px; /* Bo góc */
+}
+
+.product-grid img:hover {
+    transform: scale(1.05); /* Phóng to khi hover */
+}
+
+/* === Phần Đánh Giá === */
+.chue {
+    margin-top: -40px; /* Khoảng cách trên */
+    margin-left: 420px; /* Dịch trái */
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 60px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+}
+
+.nhae {
+    position: relative; /* Vị trí tương đối */
+    width: 100%; /* Chiều rộng 100% */
+    height: auto; /* Chiều cao tự động */
+    overflow: hidden; /* Ẩn phần thừa */
+    padding: 0px 0; /* Khoảng cách bên trong */
+    border-radius: 15px; /* Bo góc */
+    margin-top: 40px; /* Khoảng cách trên */
+    z-index: 1; /* Lớp trên cùng */
+}
+
+.danhgia {
+    width: 100%; /* Chiều rộng 100% */
+    height: 100%; /* Chiều cao 100% */
+    object-fit: cover; /* Phủ kín khung */
+    display: block; /* Hiển thị dạng khối */
+    mix-blend-mode: multiply; /* Hiệu ứng hòa trộn */
+    margin: 0; /* Bỏ khoảng cách */
+    padding: 0; /* Bỏ khoảng cách */
+}
+
+/* === Phần Doanh Nghiệp === */
+.doanhnghiep {
+    position: relative; /* Vị trí tương đối */
+    width: 100%; /* Chiều rộng 100% */
+    height: auto; /* Chiều cao tự động */
+    overflow: hidden; /* Ẩn phần thừa */
+    border-radius: 15px; /* Bo góc */
+    margin-top: -20px;
+    margin-bottom: 60px; /* Khoảng cách dưới */
+    padding: 20px 0; /* Khoảng cách bên trong */
+    z-index: 1; /* Lớp trên cùng */
+}
+
+.doanhnghiepnen {
+    width: 100%; /* Chiều rộng 100% */
+    height: auto; /* Chiều cao tự động */
+    object-fit: cover; /* Phủ kín khung */
+    display: block; /* Hiển thị dạng khối */
+    mix-blend-mode: multiply; /* Hiệu ứng hòa trộn */
+    margin: 0; /* Bỏ khoảng cách */
+    padding: 0; /* Bỏ khoảng cách */
+    border: none; /* Bỏ viền */
+}
+
+/* === Responsive cho Danh Mục và Menu Sản Phẩm === */
+@media (max-width: 1200px) {
+    .product-grid, section[noibat="danhmucnoibat"] .category-container {
+        grid-template-columns: repeat(4, 1fr); /* 4 cột */
+        max-width: 1000px; /* Chiều rộng tối đa */
+    }
+}
+
+@media (max-width: 992px) {
+    .product-grid, section[noibat="danhmucnoibat"] .category-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid, section[noibat="danhmucnoibat"] .category-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột */
+        gap: 20px; /* Khoảng cách giữa các mục */
+    }
+    
+    .product-grid img, section[noibat="danhmucnoibat"] .category-item img {
+        max-width: 180px; /* Chiều rộng tối đa */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid, section[noibat="danhmucnoibat"] .category-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 cột */
+    }
+    
+    .product-grid img, section[noibat="danhmucnoibat"] .category-item img {
+        max-width: 250px; /* Chiều rộng tối đa */
+    }
+}
+
+/* === Container Liên Hệ === */
+.contact-container {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    justify-content: space-between; /* Căn đều hai bên */
+    max-width: 1200px; /* Chiều rộng tối đa */
+    margin: 50px auto; /* Căn giữa */
+    padding: 0 10px; /* Khoảng cách bên trong */
+}
+
+/* === Phần Thông Tin Cửa Hàng === */
+.store-info {
+    background-color: white; /* Màu nền trắng */
+    border-radius: 15px; /* Bo góc */
+    padding: 30px; /* Khoảng cách bên trong */
+    width: 45%; /* Chiều rộng 45% */
+    border: 2px solid #006847; /* Viền */
+    position: relative; /* Vị trí tương đối */
+    overflow: hidden; /* Ẩn phần thừa */
+}
+
+.store-info::before {
+    content: ''; /* Tạo phần tử giả */
+    position: absolute; /* Vị trí tuyệt đối */
+    top: -20px; /* Dịch lên */
+    left: -20px; /* Dịch trái */
+    width: 120%; /* Chiều rộng 120% */
+    height: 120%; /* Chiều cao 120% */
+    background-color: #ffffff; /* Màu nền trắng */
+    z-index: -1; /* Lớp dưới cùng */
+    border-radius: 15px; /* Bo góc */
+}
+
+.store-info h2 {
+    color: #006847; /* Màu chữ */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    font-size: 24px; /* Kích thước chữ */
+}
+
+.info-item {
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.info-item h3 {
+    color: #006847; /* Màu chữ */
+    font-size: 16px; /* Kích thước chữ */
+    margin-bottom: 5px; /* Khoảng cách dưới */
+}
+
+.info-item p {
+    color: #333; /* Màu chữ */
+    font-size: 14px; /* Kích thước chữ */
+}
+
+/* === Phần Form Liên Hệ === */
+.contact-form {
+    width: 45%; /* Chiều rộng 45% */
+    padding: 20px; /* Khoảng cách bên trong */
+}
+
+.contact-form h2 {
+    color: #006847; /* Màu chữ */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    font-size: 28px; /* Kích thước chữ */
+}
+
+.contact-form p {
+    color: #333; /* Màu chữ */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    line-height: 1.6; /* Khoảng cách dòng */
+}
+
+.email-input {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    border: 1px solid #fff; /* Viền */
+    border-radius: 30px; /* Bo góc */
+    overflow: hidden; /* Ẩn phần thừa */
+    background-color: white; /* Màu nền trắng */
+}
+
+.email-input input {
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    padding: 12px 20px; /* Khoảng cách bên trong */
+    border: none; /* Bỏ viền */
+    outline: none; /* Bỏ viền khi focus */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+.email-input button {
+    background: none; /* Bỏ màu nền */
+    border: none; /* Bỏ viền */
+    padding: 0 10px; /* Khoảng cách bên trong */
+    cursor: pointer; /* Con trỏ chuột */
+    color: #006847; /* Màu chữ */
+}
+
+.social-icons {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    gap: 15px; /* Khoảng cách giữa các mục */
+}
+
+.social-icon {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    width: 45px; /* Chiều rộng */
+    height: 45px; /* Chiều cao */
+    background-color: white; /* Màu nền trắng */
+    border-radius: 20px; /* Bo góc */
+    color: #006847; /* Màu chữ */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+    border: 1px solid #006847; /* Viền */
+}
+
+.social-icon:hover {
+    background-color: #ffffff; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+}
+
+.social-icon svg {
+    width: 20px; /* Chiều rộng */
+    height: 20px; /* Chiều cao */
+    fill: none; /* Bỏ màu nền */
+    stroke: currentColor; /* Màu viền */
+    stroke-width: 2; /* Độ dày viền */
+    stroke-linecap: round; /* Kiểu đầu viền */
+    stroke-linejoin: round; /* Kiểu nối viền */
+}
+
+/* === Responsive cho Phần Liên Hệ === */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Xếp chồng theo chiều dọc */
+    }
+    
+    .store-info, .contact-form {
+        width: 100%; /* Chiều rộng 100% */
+        margin-bottom: 30px; /* Khoảng cách dưới */
+    }
+}
+
+/* === Phần Khuyến Mãi === */
+.chukhuyemai {
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 2px 30px; /* Khoảng cách bên trong */
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 58px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+    margin-top: -25px; /* Khoảng cách trên */
+}
+
+.khuyenmainen {
+    width: 100%; /* Chiều rộng 100% */
+    height: 200px; /* Chiều cao */
+    overflow: hidden; /* Ẩn phần thừa */
+    position: relative; /* Vị trí tương đối */
+    margin-bottom: 70px;
+}
+
+.khuyenmai {
+    width: 100%; /* Chiều rộng 100% */
+    height: 100%; /* Chiều cao 100% */
+    object-fit: cover; /* Phủ kín khung */
+    margin-bottom: 70px;
+}
+
+.chukhuyenmaidacbiet {
+    text-align: center; /* Căn giữa văn bản */
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 70px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+       margin-bottom: 60px;
+}
+
+/* Container chính cho các ảnh khuyến mãi */
+/* Container chính chứa cả 3 ảnh */
+/* Container chính chứa cả 3 ảnh */
+.khuyenmaidacbiet-container {
+    display: flex; /* Sắp xếp theo chiều ngang */
+    width: 100%;
+    gap: 1px; /* Khoảng cách giữa ảnh bên trái và phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+/* Ảnh 1 bên trái - chiếm nhiều không gian hơn */
+.khuyemaidacbiet1 {
+    flex: 1.95; /* Tăng tỉ lệ để chiếm 60% không gian */
+    max-width: 100%;
+}
+
+.khuyemaidacbiet1 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    max-width: 2000px;
+}
+
+/* Cột chứa ảnh 2 và 3 */
+.khuyemaidacbiet-right {
+    flex: 1; /* Chiếm khoảng 40% không gian */
+    max-width: 40%;
+    display: flex;
+    flex-direction: column; /* Xếp dọc ảnh 2 và 3 */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+    gap: 10px; /* Khoảng cách giữa ảnh 2 và ảnh 3 */
+}
+
+
+/* Ảnh 2 và 3 lớn hơn một chút */
+.khuyemaidacbiet2 img {
+    width: 100%; /* Mở rộng hết khung chứa */
+    max-width: 570px; /* Tăng kích thước tối đa */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.khuyemaidacbiet3 img {
+    width: 100%; /* Mở rộng hết khung chứa */
+    max-width: 590px; /* Tăng kích thước tối đa */
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Responsive cho phần khuyến mãi */
+@media (max-width: 768px) {
+    .khuyenmai-container {
+        flex-direction: column; /* Xếp chồng theo chiều dọc */
+        align-items: center; /* Căn giữa theo chiều ngang */
+    }
+
+    .khuyemaidacbiet1,
+    .khuyemaidacbiet-right {
+        max-width: 100%; /* Chiều rộng 100% */
+    }
+
+    .khuyemaidacbiet-right {
+        width: 100%; /* Chiều rộng 100% */
+    }
+}
+
+/* === Hiệu Ứng và Parallax === */
+.danhmucnoibat-item, .product-grid > div {
+    position: relative; /* Vị trí tương đối */
+}
+
+.carousel-item {
+    transition: all 0.1s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.parallax-img {
+    transition: transform 0.1s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.product-grid img:hover {
+    transform: scale(1.1) rotate(5deg); /* Phóng to và xoay khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.danhmucnoibat-item img:hover {
+    transform: scale(1.1) rotate(5deg); /* Phóng to và xoay khi hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng */
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.carousel-background {
+    perspective: 1500px; /* Hiệu ứng 3D */
+}
+
+.carousel-background img {
+    transform-style: preserve-3d; /* Hiệu ứng 3D */
+    transition: transform 0.3s ease, opacity 0.2s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.carousel-background img:hover {
+    transform: scale(1.3) rotateY(20deg) translateZ(80px); /* Phóng to, xoay và dịch chuyển */
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.8); /* Hiệu ứng bóng */
+}
+
+.product-grid > div {
+    perspective: 1500px; /* Hiệu ứng 3D */
+    transform-style: preserve-3d; /* Hiệu ứng 3D */
+}
+
+.product-grid > div:hover {
+    transform: translateZ(50px) rotateX(20deg) rotateY(20deg); /* Dịch chuyển và xoay */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng */
+}
+
+.product-grid img {
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.product-grid img:hover {
+    transform: scale(1.4) rotateY(25deg) translateZ(60px); /* Phóng to, xoay và dịch chuyển */
+}
+
+.parallax-section {
+    position: relative; /* Vị trí tương đối */
+    width: 100%; /* Chiều rộng 100% */
+    height: 400px; /* Chiều cao */
+    overflow: hidden; /* Ẩn phần thừa */
+    perspective: 2000px; /* Hiệu ứng 3D */
+}
+
+.parallax-img {
+    width: 120%; /* Chiều rộng 120% */
+    height: 120%; /* Chiều cao 120% */
+    object-fit: cover; /* Phủ kín khung */
+    position: absolute; /* Vị trí tuyệt đối */
+    top: -10%; /* Dịch lên */
+    left: -10%; /* Dịch trái */
+    transition: transform 0.2s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.store-info, .contact-form {
+    perspective: 1500px; /* Hiệu ứng 3D */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.store-info:hover, .contact-form:hover {
+    transform: rotateX(10deg) rotateY(10deg) translateZ(50px); /* Xoay và dịch chuyển */
+}
+
+.social-icon {
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.social-icon:hover {
+    transform: translateZ(30px) rotateY(360deg); /* Dịch chuyển và xoay */
+}
+
+/* === Phần Sản Phẩm Nổi Bật === */
+.anhsanphamdau {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    gap: 20px; /* Khoảng cách giữa các mục */
+    padding: 20px; /* Khoảng cách bên trong */
+    border-radius: 15px; /* Bo góc */
+    max-width: 1100px; /* Chiều rộng tối đa */
+    margin: 0 auto; /* Căn giữa */
+    margin-top: -20px;
+}
+
+.anhsanphamdauweb {
+    flex: 1; /* Chiếm 1 phần không gian */
+    text-align: center; /* Căn giữa văn bản */
+    border-radius: 10px; /* Bo góc */
+    padding: 15px; /* Khoảng cách bên trong */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+.anhsanphamdauweb:hover {
+    transform: scale(1.05); /* Phóng to khi hover */
+}
+
+.anhsanphamdauweb img {
+    width: 750px; /* Chiều rộng 100% */
+    height: auto; /* Chiều cao tự động */
+    max-height: 500px; /* Chiều cao tối đa */
+    object-fit: contain; /* Giữ tỷ lệ hình ảnh */
+}
+
+.anhsanphamdau0 {
+    margin-left: 420px; /* Dịch trái */
+    margin-top: 20px; /* Khoảng cách trên */
+    margin-bottom: 50px; /* Khoảng cách dưới */
+}
+
+.anhsanphamdauweb1 {
+    margin-left: -240px; /* Dịch trái */
+}
+
+.anhsanphamdauweb2 {
+    margin-left: -70px; /* Dịch trái */
+}
+
+.anhsanphamdauweb3 {
+    margin-left: -5px; /* Dịch trái */
+}
+.anhsanphamdauweb5{
+    margin-right :-190px;
+
+}
+
+/* === Phần Tại Sao và Tại Vì === */
+.taisao img {
+    width: 800px; /* Chiều rộng */
+    height: 800px; /* Chiều cao */
+    object-fit: fill; /* Điền đầy khung */
+    margin-left: 2px; /* Dịch trái */
+    margin-top: 100px; /* Khoảng cách trên */
+    z-index: 0; /* Lớp dưới cùng */
+}
+
+.taivi img {
+    width: 800px; /* Chiều rộng */
+    height: 800px; /* Chiều cao */
+    object-fit: fill; /* Điền đầy khung */
+    margin-left: 730px; /* Dịch trái */
+    margin-top: -810px; /* Dịch lên */
+    z-index: 0; /* Lớp dưới cùng */
+}
+
+/* === Tiêu Đề Khách Hàng Doanh Nghiệp === */
+.chudoanhnghiemnhae {
+    margin-top: 60px; /* Khoảng cách trên */
+    margin-left: 350px; /* Dịch trái */
+    margin-bottom: 0px;
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 60px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+}
+
+/* === Tiêu Đề Sản Phẩm Nổi Bật === */
+.hahh  {
+    margin-top: 20px; /* Khoảng cách trên */
+    margin-left: 480px; /* Dịch trái */
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 60px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+}
+
+/* === Tiêu Đề Danh Mục Nổi Bật === */
+.haha {
+    margin-top: 20px; /* Khoảng cách trên */
+    margin-left: 450px; /* Dịch trái */
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 70px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+}
+
+/* === Tiêu Đề Danh Mục Nổi Bật (H3) === */
+.danhmucnoibat-1 h3 {
+    font-family: 'Baloo 2', cursive; /* Font chữ */
+    font-size: 18px; /* Kích thước chữ */
+    font-weight: 800; /* Độ đậm */
+    color: #00aa6c; /* Màu chữ */
+    text-transform: uppercase; /* Chữ in hoa */
+    text-shadow: /* Hiệu ứng bóng chữ */
+      -2px -2px 0 #fff,
+       2px -2px 0 #fff,
+      -2px  2px 0 #fff,
+       2px  2px 0 #fff;
+}
+.anh img {
+    margin-top: -60px;
+}

@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo', sans-serif;
+    background: linear-gradient(180deg, #a8edcb, #ffffff); /* Gradient trộn hai màu */
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* Thanh điều hướng */
+nav {
+    height: 88px;
+    background-color: #ffffff;
+    padding: 25px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    font-family: 'Lora', sans-serif;
+    text-decoration: none;
+    color: #00765a;
+    padding: 5px 10px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+nav ul li a.active {
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+
+
+
+/* Tiêu đề chính */
+
+.chu h1 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: 600;
+    color: #00aa6c;
+    text-transform: uppercase;
+}
+
+/* Phần giới thiệu */
+.gioithieu h1 {
+    color :#00765a;
+    font-size: 2.0em;
+    font-weight: 300;
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+.gioithieu h2 {
+    color :#00765a;
+    font-size: 2.0em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+
+.gioithieu h3{
+    color :#00765a;
+    font-size: 2.0em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 60px;
+}
+/* Logo */
+.logo {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+
+.logo img {
+    width: 150px;
+    height: auto;
+}
+
+/* Container chính cho nội dung và hình ảnh */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nội dung văn bản */
+.text-content {
+    flex: 1;
+    text-align: left;
+}
+
+/* Tầm nhìn */
+
+.so1 h1 {
+    color :#00765a;
+    font-size:2.0em;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+
+}
+.so1 h2{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+.so1 h3{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+.so2 h1{
+    color :#00765a;
+    font-size:2.0em;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.so2 h2{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+.so2 h3{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+.so2 h4{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+.so3 h1{
+    color :#00765a;
+    font-size:2.0em;
+    font-weight: 300;
+    margin-top: 50px;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.so3 h2{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+.so3 h3{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+.so3 h4{
+    color :#000000;
+    font-size: 1.6em;
+    font-weight: 300;
+    margin-top: 5px;
+    margin-left: 100px;
+}
+
+
+.logo img {
+    width: 300px;
+    height: 300px;
+}
+
+.sua img {
+    margin-left:950px ;
+    margin-top: -400px;
+}
+
+/* Responsive */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

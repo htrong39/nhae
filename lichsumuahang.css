@@ -1,0 +1,167 @@
+/* ✅ Thiết kế tổng quát */
+body {
+    font-family: 'Baloo', sans-serif;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+/* ✅ Thanh điều hướng */
+.navbar {
+    background-color: #ff5722;
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* ✅ Container chính */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* ✅ Hiển thị khi không có đơn hàng */
+.no-orders {
+    font-size: 18px;
+    color: #888;
+}
+
+/* ✅ Card hiển thị đơn hàng */
+.order-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.order-card:hover {
+    transform: scale(1.03);
+}
+
+/* ✅ Danh sách sản phẩm */
+.order-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.order-card ul li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Tổng tiền */
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e91e63;
+}
+/* ✅ Hiệu ứng làm nổi bật sản phẩm */
+.highlighted {
+    border: 3px solid #ff9800 !important;
+    background-color: #fff3e0;
+    animation: highlightFade 2s ease-in-out;
+}
+
+@keyframes highlightFade {
+    0% { background-color: #ffcc80; }
+    100% { background-color: #fff3e0; }
+}
+
+
+/* ✅ Hiển thị tiêu đề ngày */
+.order-date {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff5722;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ✅ Phân chia từng ngày */
+.order-date-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff5f5;
+    border-radius: 10px;
+}
+
+/* ✅ Card hiển thị đơn hàng */
+.order-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.order-card:hover {
+    transform: scale(1.03);
+}
+
+/* ✅ Tổng tiền */
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+
+/* ✅ Hiển thị tiêu đề ngày */
+.order-date {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff5722;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff5722;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ✅ Phân chia từng ngày */
+.order-date-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff5f5;
+    border-radius: 10px;
+}
+
+/* ✅ Card hiển thị đơn hàng */
+.order-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.order-card:hover {
+    transform: scale(1.03);
+}
+
+/* ✅ Làm nổi bật tên khách hàng */
+.customer-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #009688;
+}
+
+/* ✅ Tổng tiền */
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e91e63;
+}

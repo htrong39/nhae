@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Bán Hàng Sinh Động</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            width: 500px;
+            height: 700px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+            transition: transform 0.5s ease;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-container:hover {
+            transform: scale(1.05);
+        }
+
+        .chat-header {
+            background: linear-gradient(45deg, #ff9966, #ff5e62);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2em;
+            border-radius: 30px 30px 0 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .chat-messages {
+            flex-grow: 1;
+            padding: 30px;
+            overflow-y: auto;
+            background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+        }
+
+        .chat-input {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+            display: flex;
+            gap: 15px;
+        }
+
+        .chat-input input {
+            width: 75%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .chat-input input:focus {
+            outline: none;
+            transform: scale(1.05);
+            background: white;
+        }
+
+        .chat-input button {
+            width: 25%;
+            padding: 15px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #00c6ff, #0072ff);
+            color: white;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 20px rgba(0, 114, 255, 0.6);
+        }
+
+        .chat-input button:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 10px 30px rgba(0, 114, 255, 0.8);
+        }
+
+        .message {
+            margin: 15px 0;
+            padding: 15px 20px;
+            border-radius: 20px;
+            max-width: 85%;
+            animation: popIn 0.6s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .user-message {
+            background: linear-gradient(45deg, #43cea2, #185a9d);
+            color: white;
+            margin-left: auto;
+        }
+
+        .bot-message {
+            background: linear-gradient(45deg, #f6d365, #fda085);
+            color: #333;
+            margin-right: auto;
+        }
+
+        @keyframes popIn {
+            0% { opacity: 0; transform: translateY(20px) scale(0.8); }
+            80% { transform: translateY(-5px) scale(1.05); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        /* Hiệu ứng hạt nổi */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+            animation: float3D 6s infinite ease-in-out;
+        }
+
+        @keyframes float3D {
+            0% { transform: translateZ(-100px) translateY(0); opacity: 0.9; }
+            50% { transform: translateZ(100px) translateY(-150px); opacity: 0.5; }
+            100% { transform: translateZ(-100px) translateY(-300px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">Chatbot Hỗ Trợ</div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Nhập câu hỏi...">
+            <button onclick="sendMessage()">Gửi</button>
+        </div>
+    </div>
+    <div class="particles" id="particles"></div>
+
+    <script>
+        // Mock API
+        const mockApi = async (message) => {
+            const responses = {
+               "xin chào": "Chào bạn! Mình là Tư vấn đến từ nhà ê, hỗ trợ bạn mua sắm nhé!",
+    "giá bao nhiêu": "Bạn muốn biết giá sản phẩm nào? Mình báo ngay!",
+    "có hàng không": "Sản phẩm nào bạn cần? Mình kiểm tra kho liền!",
+    "giao hàng bao lâu": "Giao hàng từ 2-5 ngày tùy khu vực bạn ơi!",
+    "sữa hạt có nguồn gốc từ đâu": "Sản phẩm này có nguồn gốc từ [thương hiệu/nơi sản xuất] đó ạ! Bạn yên tâm về chất lượng nha!",
+    "thành phần của sữa hạt là gì": "Sữa hạt này gồm các thành phần: [liệt kê thành phần]. Bạn có muốn xem chi tiết trên bao bì không nè?",
+    "sữa hạt có đường không": "Bên mình có cả loại có đường và không đường luôn ạ! Bạn thích loại nào nè?",
+    "người ăn kiêng có uống được không": "Dạ có ạ! Bên mình có loại dành riêng cho người ăn kiêng, không đường hoặc ít calo. Bạn muốn mình tư vấn loại nào không ạ?",
+    "trẻ em có uống được không": "Dạ, bé nhà mình bao nhiêu tuổi để mình tư vấn loại phù hợp nha?",
+    "hạn sử dụng bao lâu": "Sản phẩm này hạn sử dụng đến [ngày/tháng/năm] lận ạ! Bạn cứ yên tâm dùng nha!",
+    "bảo quản sữa như thế nào": "Bạn nên để nơi khô ráo, thoáng mát. Nếu đã mở hộp, tốt nhất bảo quản trong tủ lạnh và dùng trong [số ngày] nha!",
+    "có chương trình khuyến mãi không": "Dạ có nè! Hiện tại bên mình đang có chương trình [tên khuyến mãi], áp dụng đến [ngày]. Bạn có muốn tham gia không ạ?",
+    "mua nhiều có giảm giá không": "Dạ có ưu đãi khi mua số lượng lớn luôn ạ! Bạn định lấy bao nhiêu hộp để mình báo giá tốt nhất nhé?",
+    "phí giao hàng bao nhiêu": "Phí ship sẽ tùy khu vực đó ạ! Bạn cho mình xin địa chỉ để mình báo phí chính xác nha!",
+    "nếu hàng bị hư hỏng có được đổi không": "Dạ được luôn ạ! Nếu hàng bị lỗi từ nhà sản xuất hoặc quá trình vận chuyển, bạn báo ngay để mình hỗ trợ đổi trả nha!",
+    "sữa hạt có những vị gì": "Dạ, hiện tại bên mình có các vị như [liệt kê các vị]. Bạn thích vị nào để mình tư vấn thêm nè?",
+    "default": "Mình chưa hiểu lắm, bạn hỏi lại cụ thể hơn nhé?"
+            };
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    const reply = responses[message.toLowerCase()] || responses["default"];
+                    resolve({ reply });
+                }, 1000);
+            });
+        };
+
+        async function sendMessage() {
+            const input = document.getElementById("userInput");
+            const message = input.value.trim();
+            
+            if (message) {
+                addMessage(message, "user-message");
+                const data = await mockApi(message);
+                addMessage(data.reply, "bot-message");
+                input.value = "";
+            }
+        }
+
+        function addMessage(text, className) {
+            const chatMessages = document.getElementById("chatMessages");
+            const messageDiv = document.createElement("div");
+            messageDiv.className = `message ${className}`;
+            messageDiv.textContent = text;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        document.getElementById("userInput").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                sendMessage();
+            }
+        });
+
+        // Tạo hạt nổi
+        function createParticles() {
+            const particlesContainer = document.getElementById("particles");
+            for (let i = 0; i < 80; i++) {
+                const particle = document.createElement("div");
+                particle.className = "particle";
+                particle.style.left = Math.random() * 100 + "vw";
+                particle.style.top = Math.random() * 100 + "vh";
+                particle.style.animationDelay = Math.random() * 6 + "s";
+                particlesContainer.appendChild(particle);
+            }
+        }
+        createParticles();
+    </script>
+</body>
+</html>

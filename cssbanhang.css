@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+label {
+    margin-top: 10px;
+}
+
+button {
+    background: #ff5722;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.product h3 {
+    display: none; /* Ẩn tên sản phẩm */
+}

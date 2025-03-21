@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán - Shopee Style</title>
+    <link rel="stylesheet" href="thanhtoan.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Nhà  Ê</div>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="vechungtoi.html">Về chúng tôi</a></li>
+                <li><a href="loiichsuckhoe.html">Lợi ích sức khỏe</a></li>
+                <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="checkout-container">
+        <div class="cart-section">
+            <h2>🛒 Giỏ hàng của bạn</h2>
+            <div id="cart-items"></div>
+            <p class="total-price">Tổng tiền: <strong><span id="total-price">0</span> VND</strong></p>
+        </div>
+
+        <div class="payment-section">
+            <h2>📄 Thông tin thanh toán</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">👤 Họ và tên:</label>
+                    <input type="text" id="name" required placeholder="Nhập họ và tên của bạn">
+                </div>
+                <div class="form-group">
+                    <label for="phone">📞 Số điện thoại:</label>
+                    <input type="tel" id="phone" required placeholder="Nhập số điện thoại (VD: 0901234567)" pattern="[0-9]{10}">
+                </div>
+                <div class="form-group">
+                    <label for="address">📍 Địa chỉ:</label>
+                    <input type="text" id="address" required placeholder="Nhập địa chỉ nhận hàng">
+                </div>
+                <div class="form-group">
+                    <label for="payment-method">💳 Hình thức thanh toán:</label>
+                    <select id="payment-method">
+                        <option value="Tiền mặt">💵 Thanh toán khi nhận hàng</option>
+                        <option value="Momo">📱 Ví điện tử Momo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="order-note">✏️ Ghi chú đơn hàng:</label>
+                    <textarea id="order-note" placeholder="Nhập ghi chú (nếu có)"></textarea>
+                </div>
+                <p class="delivery-info">⏰ Thời gian giao hàng dự kiến: <span id="delivery-time"></span></p>
+                <button type="submit" id="confirm-payment">🛍️ Đặt hàng ngay</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="banhang.js"></script>
+</body>
+</html>

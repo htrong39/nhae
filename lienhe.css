@@ -1,0 +1,457 @@
+/* === Thiết lập cơ bản cho toàn bộ trang === */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo', sans-serif; /* Font chữ chính */
+    background-color: #a8edcb; /* Màu nền của trang */
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu bằng chiều cao màn hình */
+    padding-bottom: 50px; /* Khoảng cách dưới cùng */
+}
+
+/* === Thanh điều hướng (Navigation) === */
+nav {
+    height: 88px; /* Chiều cao của thanh điều hướng */
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 25px 0; /* Khoảng cách bên trong */
+    border-radius: 10px; /* Bo góc */
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+nav ul {
+    display: flex; /* Sắp xếp các mục theo hàng ngang */
+    list-style: none; /* Bỏ dấu đầu dòng */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 30px; /* Khoảng cách giữa các mục */
+}
+
+nav ul li a {
+    font-family: 'Baloo', sans-serif; /* Font chữ cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #00765a; /* Màu chữ */
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    font-size: 21px; /* Kích thước chữ */
+    font-weight: 700; /* Độ đậm */
+}
+
+nav ul li a.active {
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Bo góc */
+}
+
+
+
+
+
+body {
+    font-family: 'Baloo', sans-serif;/* Font chữ */
+    background-color: #a8edcb,#ffffff;/* Màu nền */
+    text-align: center;/* Canh giữa nội dung */
+}
+
+.info-section {/* Phần thông tin */
+    display: flex;/* Hiển thị các phần tử theo chiều ngang */
+    justify-content: center;/* Căn giữa theo chiều ngang */
+    align-items: center;/* Căn giữa theo chiều dọc */
+    /*background-color: white;/* Màu nền */
+    padding: 20px;/* Khoảng cách giữa viền và nội dung */
+    border-radius: 10px;/* Bo tròn góc */
+    max-width: 80%;/* Chiều rộng tối đa */
+    margin: 20px auto;/* Canh giữa */
+    /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* Đổ bóng */
+}
+
+.info-text {/* Phần thông tin văn bản */
+    width: 100%;/* Chiều rộng */
+    text-align: left;/* Canh trái */
+    font-family:'Baloo', sans-serif ;
+}
+.info-text p {/* Đoạn văn */
+    font-size: 30px;/* Cỡ chữ */
+    margin-bottom: 40px;/* Khoảng cách với phần tử dưới */
+    font-family:'Balo', sans-serif ;
+}
+.info-text h2 {/* Tiêu đề */
+    color: #005f48;/* Màu chữ */
+    font-size: 30px;/* Cỡ chữ */
+    margin-bottom: 20px;/* Khoảng cách với phần tử dưới */
+    font-family:'Baloo', sans-serif;
+}
+.contact-container {/* Chứa thông tin liên hệ */
+    display: flex;/* Hiển thị các phần tử theo chiều ngang */
+    gap: 3px;/* Khoảng cách giữa các phần tử */
+    margin-top: 10px;/* Khoảng cách với phần tử trên */
+}
+
+.contact-box {/* Ô thông tin liên hệ */
+    display: flex;/* Hiển thị các phần tử theo chiều ngang */
+    background: #e3f2fd;/* Màu nền */
+    padding: 10px;/* Khoảng cách giữa viền và nội dung */
+    border-radius: 5px;/* Bo tròn góc */
+}
+
+.contact-box img {/* Ảnh icon */
+    width: 20px;/* Chiều rộng */
+}
+
+.contact-box a {/* Liên kết */
+    text-decoration: none;/* Ẩn gạch chân */
+    font-weight: bold;/* Làm chữ đậm */
+    color: #007bff;/* Màu chữ */
+}
+
+.info-image img {/* Ảnh thông tin */
+    width: 300px;/* Chiều rộng */
+    border-radius: 10px;/* Bo tròn góc */
+    margin-top: -30px;/* Khoảng cách với phần tử trên */
+    margin-left: 300px;/* Khoảng cách với phần tử bên trái */
+
+}
+
+.additional-info {/* Thông tin bổ sung */
+    display: flex;/* Hiển thị các phần tử theo chiều ngang */
+    background-color: white;/* Màu nền */
+    padding: 20px;/* Khoảng cách giữa viền và nội dung */
+    border-radius: 10px;/* Bo tròn góc */
+    max-width: 60%;/* Chiều rộng tối đa */
+    margin: 20px auto;/* Canh giữa */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/* Đổ bóng */
+}
+
+.social-icons img {/* Icon mạng xã hội */
+    width: 30px;/* Chiều rộng */
+    margin: 5px;/* Khoảng cách với phần tử khác */
+}
+
+.community-link a {/* Liên kết cộng đồng */
+    text-decoration: none;/* Ẩn gạch chân */
+    font-weight: bold;/* Làm chữ đậm */
+    color: #007bff;/* Màu chữ */
+    width: 110px; /* Đổi kích thước theo mong muốn */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    vertical-align: middle; /* Căn giữa theo văn bản */
+    margin-right: 10px; /* Khoảng cách giữa ảnh và chữ */
+}
+.community-link img {
+    width: 100px; /* Điều chỉnh chiều rộng theo mong muốn */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    vertical-align: middle; /* Căn giữa theo văn bản */
+    margin-right: 10px; /* Khoảng cách giữa ảnh và chữ */
+}
+.community-link a{
+    font-family: 'HK Carta', sans-serif;
+    font-size: 28px; /* Điều chỉnh cỡ chữ theo mong muốn */
+    font-weight: 700; /* Làm chữ đậm */
+    color: #005f48; /* Đổi màu chữ theo mong muốn */
+    text-decoration: none; /* Ẩn gạch chân */
+}
+
+
+
+
+
+
+
+/* Container chính */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+/* Phần thông tin cửa hàng */
+.store-info {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 45%;
+    border: 2px solid #006847;
+    position: relative;
+    overflow: hidden;
+}
+
+.store-info::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 120%;
+    height: 120%;
+    background-color: #006847;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.store-info h2 {
+    color: #006847;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item h3 {
+    color: #006847;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: #333;
+    font-size: 14px;
+}
+
+/* Phần form liên hệ */
+.contact-form {
+    width: 45%;
+    padding: 20px;
+}
+
+.contact-form h2 {
+    color: #006847;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.contact-form p {
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.email-input {
+    display: flex;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.email-input input {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.email-input button {
+    background: none;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    color: #006847;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 10px;
+    color: #006847;
+    transition: all 0.3s ease;
+    border: 1px solid #006847;
+}
+
+.social-icon:hover {
+    background-color: #006847;
+    color: white;
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .store-info, .contact-form {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+.store-info {
+    background-color: white; /* Màu nền trắng */
+    border-radius: 15px; /* Bo góc */
+    padding: 30px; /* Khoảng cách bên trong */
+    width: 45%; /* Chiều rộng 45% */
+    border: 2px solid #006847; /* Viền */
+    position: relative; /* Vị trí tương đối */
+    overflow: hidden; /* Ẩn phần thừa */
+}
+
+.store-info::before {
+    content: ''; /* Tạo phần tử giả */
+    position: absolute; /* Vị trí tuyệt đối */
+    top: -20px; /* Dịch lên */
+    left: -20px; /* Dịch trái */
+    width: 120%; /* Chiều rộng 120% */
+    height: 120%; /* Chiều cao 120% */
+    background-color: #ffffff; /* Màu nền trắng */
+    z-index: -1; /* Lớp dưới cùng */
+    border-radius: 15px; /* Bo góc */
+}
+
+.store-info h2 {
+    color: #006847; /* Màu chữ */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    font-size: 24px; /* Kích thước chữ */
+}
+
+.info-item {
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.info-item h3 {
+    color: #006847; /* Màu chữ */
+    font-size: 16px; /* Kích thước chữ */
+    margin-bottom: 5px; /* Khoảng cách dưới */
+}
+
+.info-item p {
+    color: #333; /* Màu chữ */
+    font-size: 14px; /* Kích thước chữ */
+}
+
+/* === Phần Form Liên Hệ === */
+.contact-form {
+    width: 45%; /* Chiều rộng 45% */
+    padding: 20px; /* Khoảng cách bên trong */
+}
+
+.contact-form h2 {
+    color: #006847; /* Màu chữ */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    font-size: 28px; /* Kích thước chữ */
+}
+
+.contact-form p {
+    color: #333; /* Màu chữ */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    line-height: 1.6; /* Khoảng cách dòng */
+}
+
+.email-input {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    margin-bottom: 30px; /* Khoảng cách dưới */
+    border: 1px solid #fff; /* Viền */
+    border-radius: 30px; /* Bo góc */
+    overflow: hidden; /* Ẩn phần thừa */
+    background-color: white; /* Màu nền trắng */
+}
+
+.email-input input {
+    flex: 1; /* Chiếm toàn bộ không gian còn lại */
+    padding: 12px 20px; /* Khoảng cách bên trong */
+    border: none; /* Bỏ viền */
+    outline: none; /* Bỏ viền khi focus */
+    font-size: 16px; /* Kích thước chữ */
+}
+
+.email-input button {
+    background: none; /* Bỏ màu nền */
+    border: none; /* Bỏ viền */
+    padding: 0 10px; /* Khoảng cách bên trong */
+    cursor: pointer; /* Con trỏ chuột */
+    color: #006847; /* Màu chữ */
+}
+
+.social-icons {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    gap: 15px; /* Khoảng cách giữa các mục */
+}
+
+.social-icon {
+    display: flex; /* Sắp xếp nội dung theo hàng ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    width: 45px; /* Chiều rộng */
+    height: 45px; /* Chiều cao */
+    background-color: white; /* Màu nền trắng */
+    border-radius: 20px; /* Bo góc */
+    color: #006847; /* Màu chữ */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển đổi */
+    border: 1px solid #006847; /* Viền */
+}
+
+.social-icon:hover {
+    background-color: #ffffff; /* Màu nền khi hover */
+    color: white; /* Màu chữ khi hover */
+}
+
+.social-icon svg {
+    width: 20px; /* Chiều rộng */
+    height: 20px; /* Chiều cao */
+    fill: none; /* Bỏ màu nền */
+    stroke: currentColor; /* Màu viền */
+    stroke-width: 2; /* Độ dày viền */
+    stroke-linecap: round; /* Kiểu đầu viền */
+    stroke-linejoin: round; /* Kiểu nối viền */
+}
+
+/* === Responsive cho Phần Liên Hệ === */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Xếp chồng theo chiều dọc */
+    }
+    
+    .store-info, .contact-form {
+        width: 100%; /* Chiều rộng 100% */
+        margin-bottom: 30px; /* Khoảng cách dưới */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

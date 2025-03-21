@@ -1,0 +1,52 @@
+/* === Thiết lập cơ bản cho toàn bộ trang === */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Baloo', sans-serif; /* Font chữ chính */
+    background-color: #a8edcb; /* Màu nền của trang */
+    min-height: 100vh; /* Đảm bảo chiều cao tối thiểu bằng chiều cao màn hình */
+    padding-bottom: 50px; /* Khoảng cách dưới cùng */
+}
+
+/* === Thanh điều hướng (Navigation) === */
+nav {
+    height: 88px; /* Chiều cao của thanh điều hướng */
+    background-color: #ffffff; /* Màu nền trắng */
+    padding: 25px 0; /* Khoảng cách bên trong */
+    border-radius: 10px; /* Bo góc */
+    display: flex;
+    justify-content: center; /* Căn giữa nội dung */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+nav ul {
+    display: flex; /* Sắp xếp các mục theo hàng ngang */
+    list-style: none; /* Bỏ dấu đầu dòng */
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 30px; /* Khoảng cách giữa các mục */
+}
+
+nav ul li a {
+    font-family: 'Baloo', sans-serif; /* Font chữ cho liên kết */
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #00765a; /* Màu chữ */
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    font-size: 21px; /* Kích thước chữ */
+    font-weight: 700; /* Độ đậm */
+}
+
+nav ul li a.active {
+    padding: 5px 10px; /* Khoảng cách bên trong */
+    border-radius: 5px; /* Bo góc */
+}

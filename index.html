@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Bán Sữa Hạt</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="effects.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="milk-container"></div> <!-- Container cho hiệu ứng sữa -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Trang chủ</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="vechungtoi.html">Về chúng tôi</a></li>
+      <li><a href="loiichsuckhoe.html">Lợi ích sức khỏe</a></li>
+      <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+      <li><a href="lienhe.html">Liên hệ</a></li>
+    </ul>
+  </nav>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+
+  <div id="carousel-container"></div>
+  <script type="text/babel" src="carousel.js"></script>
+
+  <section id="sanphamdau">
+    <div class="hahh">
+      <h2>Sản Phẩm Nổi Bật</h2>
+    </div>
+    <div class="anhsanphamdau0">
+      <img src="noibat1.png" alt="anh1" class="anhnen1"/>
+    </div>
+    <div class="anhsanphamdau">
+      <div class="anhsanphamdauweb1">
+        <img src="noibat2.png" alt="Sữa hạt bắp">
+      </div>
+      <div class="anhsanphamdauweb2">
+        <img src="noibat3.png" alt="Sữa hạt mè đen">
+      </div>
+      <div class="anhsanphamdauweb3">
+        <img src="noibat4.png" alt="Sữa hạt óc chó">
+      </div>
+      <div class="anhsanphamdauweb4">
+        <img src="noibat5.png" alt="Sữa hạnh nhân">
+      </div>
+      <div class="anhsanphamdauweb5">
+        <img src="noibat6.png" alt="Sữa hạt macca">
+      </div>
+    </div>
+  </section>
+
+  <section id="healthy-promise">
+    <div class="anh">
+      <img src="des (3).png" alt="depnen">
+    </div>
+  </section>
+
+  <section noibat="danhmucnoibat">
+    <div class="haha"><h2>DANH MỤC NỔI BẬT</h2></div>
+    <div class="danhmucnoibat-1">
+      <div class="danhmucnoibat-item"><img src="Danh mục nổi bật.png" alt="doanhmuc1" class="milk-glow" /><h3>Sữa Hạt Bắp</h3></div>
+      <div class="danhmucnoibat-item"><img src="Danh mục nổi bật (1).png" alt="doanhmuc2" class="milk-glow" /><h3>Sữa Hạt Mè Đen</h3></div>
+      <div class="danhmucnoibat-item"><img src="Danh mục nổi bật (2).png" alt="doanhmuc3" class="milk-glow" /><h3>Sữa Hạnh Nhân</h3></div>
+      <div class="danhmucnoibat-item"><img src="Danh mục nổi bật (3).png" alt="doanhmuc4" class="milk-glow" /><h3>Sữa Hạt Óc Chó</h3></div>
+      <div class="danhmucnoibat-item"><img src="Danh mục nổi bật (4).png" alt="doanhmuc5" class="milk-glow" /><h3>Sữa Hạt Macca</h3></div>
+    </div>
+  </section>
+
+  <div class="khuyemainen"><img src="Tặng ngay (180 x 80 cm) (180 x 40 cm).png" class="khuyenmai" alt="Ảnh nền" /></div>
+  <div class="chukhuyenmaidacbiet"><h2>Khuyến mãi đặc biệt</h2></div>
+  <div class="khuyenmaidacbiet-container">
+    <!-- Ảnh 1 lớn bên trái -->
+    <div class="khuyemaidacbiet1">
+        <img src="mua1tang1.png" class="khuyenmaidacbiet" alt="Ảnh nền" />
+    </div>
+    
+    <!-- Cột chứa ảnh 2 và 3 bên phải -->
+    <div class="khuyemaidacbiet-right">
+        <div class="khuyemaidacbiet2">
+            <img src="thediem1.png" class="khuyenmaidacbiet" alt="Ảnh nền" />
+        </div>
+        <div class="khuyemaidacbiet3">
+            <img src="thediem2.png" class="khuyenmaidacbiet" alt="Ảnh nền" />
+        </div>
+    </div>
+  </div>
+
+
+  <section id="menu">
+    <div class="chumenu"><h2>MENU SẢN PHẨM</h2></div>
+    <div class="product-grid">
+      <div class="menu1" data-product="sữa"><div class="product-container"><img src="sữa hạt bắt.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu2" data-product="sữa"><div class="product-container"><img src="sữa hạt hạnh nhân.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu3" data-product="sữa"><div class="product-container"><img src="sữa hạt macca.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu4" data-product="sữa"><div class="product-container"><img src="sữa hạt mè đen.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu5" data-product="sữa"><div class="product-container"><img src="sữa hạt óc chó.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu6" data-product="sữa"><div class="product-container"><img src="sữa mix macca - hạnh nhân.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu7" data-product="sữa"><div class="product-container"><img src="sữa mix bắp - mè đen.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu8" data-product="sữa"><div class="product-container"><img src="sữa mix hạnh nhân - bắp.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu9" data-product="sữa"><div class="product-container"><img src="sữa mix mè đen - óc chó.png" alt="sữa" class="milk-glow" /></div></div>
+      <div class="menu10" data-product="sữa"><div class="product-container"><img src="sữa mix óc chó - macca.png" alt="sữa" class="milk-glow" /></div></div>
+    </div>
+  </section>
+
+  <div class="anhsuae"><img src="sữa hạt tự NHIÊn.svg" class="suanhaenen"></div>
+  <div class="taisao"><img src="Trong thị trường sữa hạt đầy cạnh tranh, Ê mang đến sự khác biệt với cam kết 100% tự nhiên, dinh dưỡng tối ưu, và hương vị tuyệt hảo.png" class="taisaonen"></div>
+  <div class="taivi"><img src="Trong thị trường sữa hạt đầy cạnh tranh, Ê mang đến sự khác biệt với cam kết 100% tự nhiên, dinh dưỡng tối ưu, và hương vị tuyệt hảo (1).png" class="taivinen"></div>
+  
+  <h2 class="chudoanhnghiemnhae">Khách hàng doanh nghiệp</h2>
+  <div class="doanhnghiep"><img src="Ê, sữa hạt tự nhiên, gọi nhẹ là nhớ, uống là mê nha!.svg" class="doanhnghiepnen" alt="Ảnh nền" /></div>
+  
+  <h2 class="chue">Đánh giá từ bạn nhà ê</h2>
+  <div class="nhae"><img src="Feedback (1366 x 550 px).png" class="danhgia" alt="Ảnh nền" /></div>
+
+  <div class="contact-container">
+    <div class="store-info">
+      <h2>CỬA HÀNG CHÚNG TÔI</h2>
+      <div class="info-item"><h3>ĐỊA CHỈ</h3><p>281 Phan Đình Phùng, P.15, Q. Phú Nhuận, TP. Hồ Chí Minh</p></div>
+      <div class="info-item"><h3>SỐ ĐIỆN THOẠI</h3><p>0785 - 925 - 803</p></div>
+      <div class="info-item"><h3>EMAIL</h3><p><a href="/cdn-cgi/l/email-protection"><span class="__cf_email__" data-cfemail="182c302d37363f30313d2d2b2d3930392c3039363f3c392d3d183f35393134763b3735">[email&#160;protected]</span></a></p></div>
+      <div class="info-item"><h3>WEBSITE</h3><p>suahatnhae.com</p></div>
+      <div class="info-item"><h3>THỜI GIAN MỞ CỬA</h3><p>Thứ 2 - Thứ 7 từ 8h30 - 18h00</p></div>
+    </div>
+    <div class="contact-form">
+      <h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
+      <p>Hãy để lại E-mail của bạn để nhà Ê có thể gửi cho bạn những thông tin cụ thể về khuyến mãi và những thông tin mới về sản phẩm nhé.</p>
+      <div class="email-input">
+        <input type="email" placeholder="E-mail" />
+        <button type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><rect x="2" y1="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+        <a href="#" class="social-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21 8v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5z"></path><path d="M10 15l5-3-5-3v6z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Di chuyển đoạn mã Cloudflare xuống cuối body -->
+  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'923a6870c933b04f',t:'MTc0MjUyODIxNy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="effects.js"></script>
+  <script src="milk-splash.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

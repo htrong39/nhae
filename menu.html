@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Sản Phẩm - Shopee Style</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <nav> 
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="vechungtoi.html">Về chúng tôi</a></li>
+                <li><a href="loiichsuckhoe.html">Lợi ích sức khỏe</a></li>
+                <li><a href="khuyenmai.html">Khuyến mãi</a></li>
+                <li><a href="lienhe.html">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav> 
+
+    <div id="history-box">
+        <a href="lichsu.html">📜 Lịch sử giao dịch</a>
+    </div>
+    <div id="chat">
+        <a href="tuvan.html" class="chat-button">Tư Vấn Chat</a>
+    </div>
+
+    
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Tìm kiếm trên Shopee">
+            <button id="search-button">🔍</button>
+        </div>
+
+        <div class="filter-container">
+            <select id="filter-options">
+                <option value="default">Mặc định</option>
+                <option value="price-asc">Giá: Thấp đến cao</option>
+                <option value="price-desc">Giá: Cao đến thấp</option>
+                <option value="sold-desc">Lượt bán: Nhiều nhất</option>
+            </select>
+        </div>
+
+        <div class="product-grid"></div>
+    </div>
+
+    <div id="cart-summary">
+        <p><strong>Tổng tiền:</strong> <span id="total-amount">0</span> VND</p>
+        <button id="go-to-checkout">🛍️ Thanh toán</button>
+    </div>
+
+    <div id="compare-box" style="display: none;">
+        <h2>So sánh sản phẩm</h2>
+        <div id="compare-items"></div>
+        <button id="clear-compare">Xóa so sánh</button>
+    </div>
+
+    <div id="promo-popup" class="popup">
+        <div class="popup-content">
+            <h2>🎉 Khuyến mãi đặc biệt!</h2>
+            <p>Mua 2 tặng 1 cho tất cả sản phẩm hôm nay!</p>
+            <button id="close-promo">❌ Đóng</button>
+        </div>
+    </div>
+
+    <script src="banhang.js"></script>
+</body>
+</html>
